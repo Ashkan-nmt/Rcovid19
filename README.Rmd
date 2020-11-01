@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# covid19
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of covid19 is to visualize Covid-19 pandemic trends based on updated, clean data
+
+## Installation
+
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("Ashkan-nmt/covid19")
+```
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example, warning=FALSE,message=FALSE}
+library(covid19)
+
+covid_world_map("2020-10-20","death")
+
+covid_country_plot("Iran","2020-03-01","2020-10-25")
+```
+

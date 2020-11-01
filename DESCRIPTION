@@ -11,3 +11,17 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/Ashkan-nmt/covid19
 BugReports: https://github.com/Ashkan-nmt/covid19/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    ggplot2,
+    dplyr,
+    rworldmap,
+    tidyr,
+    stats,
+    utils
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

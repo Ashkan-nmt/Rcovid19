@@ -1,0 +1,23 @@
+---
+title: "visualize the covid19"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{visualize the covid19}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(covid19)
+
+covid_world_map("2020-10-20","death")
+
+covid_country_plot("Iran","2020-03-01","2020-10-25")
+```
