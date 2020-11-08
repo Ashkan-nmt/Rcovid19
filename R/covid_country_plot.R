@@ -11,6 +11,8 @@
 #' covid_country_plot("Iran","2020-03-24","2020-08-17")
 covid_country_plot <- function(country, start_date, end_date){
   library(ggplot2)
+  library(tidyr)
+  library(dplyr)
 
   country0 <- country
   data <- update_covid_data() %>%
@@ -19,7 +21,7 @@ covid_country_plot <- function(country, start_date, end_date){
   ggplot(data, aes(x=date))+
     geom_line(aes(y=death_num,color="red"),size=1)+
     geom_line(aes(y=confirmed_num,color="black"),size=1)+
-    scale_color_discrete(name ="", labels = c("Death", "Confirmed"))+
+    scale_color_discrete(name ="", labels = c("Confirmed","Death"))+
     ylab("Count")+
     ggtitle(country0)+
     theme_bw()
